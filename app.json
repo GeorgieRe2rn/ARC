@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "ARC Market",
+    "slug": "arc-market-companion",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.arcmarket.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#080A0B"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.arcmarket.mobile"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-notifications"
+    ]
+  }
+}

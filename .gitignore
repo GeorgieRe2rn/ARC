@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+dist/
+web-build/
+android/.gradle/
+android/**/build/
+android/local.properties
+.env
+.env.*
+!.env.example
+.backup-old-template/
+android/.idea/

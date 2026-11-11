@@ -1,0 +1,20 @@
+plugins { id "com.android.application" }
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) localPropertiesFile.withInputStream { localProperties.load(it) }
+def twelveDataApiKey = localProperties.getProperty("TWELVE_DATA_API_KEY", "demo")
+android {
+    namespace "com.arcmarket.wear"
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.arcmarket.wear"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        buildConfigField "String", "TWELVE_DATA_API_KEY", "\"${twelveDataApiKey.replace("\\", "\\\\").replace("\"", "\\\"")}\""
+    }
+    buildFeatures { buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_11; targetCompatibility JavaVersion.VERSION_11 }
+}
+dependencies { implementation "com.squareup.okhttp3:okhttp:4.12.0" }
